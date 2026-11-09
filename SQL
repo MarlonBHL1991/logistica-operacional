@@ -1,0 +1,8 @@
+
+-- Consulta de estoque por produto
+SELECT
+    produto,
+    SUM(quantidade) AS estoque_total
+FROM estoque
+GROUP BY produto
+ORDER BY estoque_total DESC;
